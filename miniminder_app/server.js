@@ -1,7 +1,33 @@
 const express = require('express');
+const morgan = require('morgan');
+const bodyparser = require("body-parser");
+const path = require('path');
 
 // initialize express app // 
 const app = express();
+const dotenv = require('dotenv');
+
+dotenv.config({path:'config.env'});
+const PORT = process.env.PORT || 1616 
+
+// log requests //
+app.use(morgan('tiny'));
+
+// parse requests to body-parser // 
+app.use(bodyparser.urlencoded({ extended: true }));
+
+// load assets //
+app.use('/css', express.static(path.resolve(__dirname, "assets/css")));
+// css/style.css // 
+
+app.use('/img', express.static(path.resolve(__dirname, "assets/img")));
+app.use('/js', express.static(path.resolve(__dirname, "assets/js")));
+
+
+
+
+// set view engine //
+app.set("view engine", "ejs");
 
 
 // landing page // 
@@ -68,6 +94,6 @@ app.get('/update-child', function (req,res) {
 
 
 app.listen(1616, function () {
-    console.log(`Server is running on http://localhost:$(1616)`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
 
