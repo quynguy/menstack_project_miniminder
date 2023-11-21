@@ -1,7 +1,8 @@
 One-to-One Relationships
 
-Daycare Teacher > Child
-daycare teacher > linked to one specific child 
+Daycare Teacher > Unique Teacher ID
+Child > Unique Child ID
 
-Child > Daycare Teacher
-child > each child is associated with a specific daycare teacher 
+Each teacher has a unique child ID.
+Each child has a unique child ID.
+Each child is associated to one teacher.

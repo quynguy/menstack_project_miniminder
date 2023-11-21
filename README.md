@@ -9,7 +9,7 @@ Created by quynguy
 --------------------------------------------------
 
 Purpose: <br>
-MiniMinder is a daycare application created to provide caregivers with a comprehensive tool to manage and document essential information related to children under their care. This includes recording details such as meals, diaper changes, and nap times. Furthermore, the application facilitates communication with parents by sending updates via text messages. Overall, the goal is to enhance the efficiency of daycare operations, improve transparency, and keep parents informed about their children's activities and well-being while in daycare.
+Miniminder is a daycare application that simplifies administrative processes for daycare providers. Admins can effortlessly modify and add details of daycare staff while seamlessly overseeing children's records, providing a simple and organized solution for daycare operations.
 
 --------------------------------------------------
 
