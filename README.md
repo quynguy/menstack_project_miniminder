@@ -22,7 +22,7 @@ Create:
 2.	As a user, I want to be able to input meal details for a child, specifying the type and quantity.
 3.	As a user, I want to be able to record diaper change information for a child, including time and details.
 4.	As a user, I want to be able to log nap times for a child, indicating the duration and any special notes.
-5.	As a user, I want to be able to enter updates and messages for parents, which will be sent via text.
+
 
 Read:
 1.	As a user, I want to be able to view a comprehensive list of all children in the daycare, along with their meal, diaper change, and nap time histories.
@@ -45,10 +45,18 @@ Delete:
 --------------------------------------------------
 
 
-Ice Box Features:
-1.	As a user, I wish to have the ability to create an account, choosing between educator or parent roles.
-2.	As a user, I want to be able to post comments on the school's announcements for interactive engagement.
+Ice Box Features: <br>
+Wish list of desired functionalities that MiniMinder can *potentially* offer.
 
+Create
+1.	As a user, I wish to have the ability to create an account, choosing between educator or parent roles.
+2. As a user, I want to be able to post comments on the school's announcements for interactive engagement. (Parent)
+
+Read
+1.	As a user, I want to be able to enter updates and messages for parents, which will be sent via text.
+
+Update
+1.	As a user, I want to be able to edit or add to the messages sent to parents.
 
 --------------------------------------------------
 
