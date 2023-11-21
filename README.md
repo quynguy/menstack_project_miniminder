@@ -18,36 +18,38 @@ Miniminder is a daycare application that simplifies administrative processes for
 User Stories:
 
 Create:
-1.	As a user, I want to be able to add a new child's information to the system.
-2.	As a user, I want to be able to input meal details for a child, specifying the type and quantity.
-3.	As a user, I want to be able to record diaper change information for a child, including time and details.
-4.	As a user, I want to be able to log nap times for a child, indicating the duration and any special notes.
-5.	As a user, I want to be able to enter updates and messages for parents, which will be sent via text.
+1. As a user, I want to be able to initiate the creation of a new teacher's profile in the system.
+2. As a user, I want to be able to input the teacher's first and last name, job title, gender and contact number during the profile creation.
+3. As a user, I want to be able to assign a unique teacher ID to each teacher profile.
+4. As a user, I want to be able to initiate the creation of a new child's profile in the system.
+5. As a user, I want to be able to assign a unique child ID to each child profile.
+6. As a user, I want to be able to input the child's basic information, such as name, date of birth, gender, parent's name and contact number.
+7. As a user, I want to be able to input contact numbers for the parents/guardians.
+8. As a user, I want to be able to input dietary restrictions in the child's profile.
+9. As a user, I want to be able to input the child's assigned teacher's name.
+
 
 Read:
-1.	As a user, I want to be able to view a comprehensive list of all children in the daycare, along with their meal, diaper change, and nap time histories.
-2.	As a user, I want to be able to access and review specific details about a child's dietary restrictions.
-3.	As a user, I want to be able to see a log of all text messages sent to parents regarding their child's activities.
+1. As a user, I want to be able to view a comprehensive list of all teachers in the system.
+2. As a user, I want to be able to view key details for each teacher, including their first and last name, job title, gender and contact number and teacher ID.
+3. As a user, I want to be able to view a comprehensive list of all the children in the system.
+4. As a user, I want to be able to view key details for each child, including their name, date of birth, gender, parents name and contact numbers and child ID.
+5. As a user, I want to be able to view the child's dietary restrictions.
+6. As a user, I want to be able to view the child's assigned teacher's name.
+
 
 Update:
-1.	As a user, I want to be able to modify a child's existing information, including their dietary restrictions.
-2.	As a user, I want to be able to edit meal details for a child, in case of mistakes or changes.
-3.	As a user, I want to be able to update diaper change records, including adding or modifying notes.
-4.	As a user, I want to be able to adjust nap time information, changing the duration or adding additional details.
-5.	As a user, I want to be able to edit or add to the messages sent to parents.
+1. As a user, I want to navigate to the "Edit Teacher Profile" section within the teacher's profile.
+2. As a user, I want to be able to update any basic information, such as the teacher's first and last name, job title, gender and contact number.
+3. As a user, I want to navigate to the "Edit Child Profile" section within the child's profile.
+4. As a user, I want to be able to update any basic information, such as the child's name, date of birth and gender, parents name and contact number.
+5. As a user, I want to be able to modify dietary restrictions based on any changes in their dietary needs.
+6. As a user, I want to be able to update the assigned teacher's name.
+
 
 Delete:
-1.	As a user, I want to be able to remove a child's information from the system when they are no longer attending the daycare.
-2.	As a user, I want to be able to delete specific meal records for a child.
-3.	As a user, I want to be able to delete diaper change entries for a child.
-4.	As a user, I want to be able to remove nap time records for a child.
-   
---------------------------------------------------
-
-
-Ice Box Features:
-1.	As a user, I wish to have the ability to create an account, choosing between educator or parent roles.
-2.	As a user, I want to be able to post comments on the school's announcements for interactive engagement.
+1. As a user, I want to be able to remove a teacher's profile from the system when they are no longer part of the daycare.
+2. As a user, I want to be able to remove a child's profile from the system when they are no longer attending the daycare.
 
 
 --------------------------------------------------
@@ -64,11 +66,5 @@ Getting Started
 --------------------------------------------------
 
 
-Planning Materials
-<br>
-<br>
-![image](https://github.com/quynguy/miniminder_crud_app/assets/106893103/027e3f24-0086-412a-838b-b5d38320aea3) <br>
-
-![image](https://github.com/quynguy/miniminder_crud_app/assets/106893103/9a13f15a-5b07-4659-9535-0c2ab958339c)
 
 
