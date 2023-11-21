@@ -1,11 +1,17 @@
 SEIR 10/16 Unit 2 Project <br>
 CRUD Application with Node.js, Express.js and MongoDB
 
-App Name: MiniMinder
+--------------------------------------------------
+
+App Name: MiniMinder <br>
 Created by quynguy
+
+--------------------------------------------------
 
 Purpose: <br>
 MiniMinder is a daycare application created to provide caregivers with a comprehensive tool to manage and document essential information related to children under their care. This includes recording details such as meals, diaper changes, and nap times. Furthermore, the application facilitates communication with parents by sending updates via text messages. Overall, the goal is to enhance the efficiency of daycare operations, improve transparency, and keep parents informed about their children's activities and well-being while in daycare.
+
+--------------------------------------------------
 
 
 <br> 
@@ -35,14 +41,34 @@ Delete:
 2.	As a user, I want to be able to delete specific meal records for a child.
 3.	As a user, I want to be able to delete diaper change entries for a child.
 4.	As a user, I want to be able to remove nap time records for a child.
+   
+--------------------------------------------------
+
 
 Ice Box Features:
 1.	As a user, I wish to have the ability to create an account, choosing between educator or parent roles.
 2.	As a user, I want to be able to post comments on the school's announcements for interactive engagement.
 
-Runtime Environment: Node.js
-Languages: Javascript, HTML & CSS
-NoSQL Database: MongoDB
+
+--------------------------------------------------
+
+Runtime Environment: Node.js <br>
+Languages: Javascript, HTML & CSS <br>
+NoSQL Database: MongoDB <br>
+
+--------------------------------------------------
 
 Getting Started
-[link of heroku development]
+[link of heroku deployment]
+
+--------------------------------------------------
+
+
+Planning Materials
+<br>
+<br>
+![image](https://github.com/quynguy/miniminder_crud_app/assets/106893103/027e3f24-0086-412a-838b-b5d38320aea3) <br>
+
+![image](https://github.com/quynguy/miniminder_crud_app/assets/106893103/9a13f15a-5b07-4659-9535-0c2ab958339c)
+
+
