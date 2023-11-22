@@ -144,12 +144,16 @@ table{
 }
 
 #update_staff .form-group,
-#add_staff .form-group{
+#add_staff .form-group,
+#add_child .form-group,
+#update_child .form-group{
     margin: .4em 0;
 }
 
 #update_staff .form-group input[type="text"],
-#add_staff .form-group input[type="text"]{
+#add_staff .form-group input[type="text"],
+#add_child .form-group input[type="text"],
+#update_child .form-group input[type="text"]{
     width: 100%;
     padding: .6em 1em;
     margin: .5em 0;
@@ -207,7 +211,9 @@ table{
 
 #update_staff .form-group .btn,
 #add_staff .form-group .btn,
-#privileges .form-group .btn{
+#privileges .form-group .btn,
+#add_child .form-group .btn,
+#update_child .form-group .btn{
     width: 100%;
     padding: .9em 1em;
     background-color: skyblue;
@@ -221,7 +227,9 @@ table{
 
 #update_staff .form-group .btn:hover,
 #add_staff .form-group .btn:hover,
-#privileges .form-group .btn:hover{
+#privileges .form-group .btn:hover,
+#add_child .form-group .btn:hover,
+#update_child .form-group .btn:hover{
     background-color: #5F9EA0;
     color: pink;
 }

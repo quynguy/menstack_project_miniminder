@@ -2,13 +2,19 @@
              <form method="POST" id="add_child">
                 <div class="new_child">
                     <div class="form-group">
-                        <label for="name" class="text-light"> Name </label>
+                        <label for="name" class="text-light"> Child Name </label>
                         <input type="hidden" name="id" value="">
                         <input type="text" name="name" value="" placeholder="Jane Smith">
                     </div>
 
                     <div class="form-group">
-                        <label for="email" class="text-light"> Email </label>
+                        <label for="birthday" class="text-light"> Date Of Birth </label>
+                        <input type="text" name="birthday" value="" placeholder="02/14/1991">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="email" class="text-light"> Parents Name  </label>
                         <input type="text" name="email" value="" placeholder="example@gmail.com">
                     </div>
 
@@ -18,13 +24,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="job-title" class="text-light"> Position </label>
-                        <input type="text" name="job-title" value="" placeholder="Teacher">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="birthday" class="text-light"> Date Of Birth </label>
-                        <input type="text" name="birthday" value="" placeholder="02/14/1991">
+                        <label for="contact-number" class="text-light"> Assigned Teacher </label>
+                        <input type="text" name="contact-number" value="" placeholder="Teacher Name">
                     </div>
 
                     <div class="form-group">
@@ -40,19 +41,6 @@
                         </div>
                     </div>
 
-                    
-                    <div class="form-group">
-                        <label for="status" class="text-light"> Status </label>
-                        <div class="radio inline">
-                            <input type="radio"  id="radio-4" name="status" value="Active">
-                            <label for="radio-4" class="radio-label"> Active </label>
-                        </div>
-
-                        <div class="radio inline">
-                            <input type="radio" id="radio-5" name="status" value="Inactive">
-                            <label for="radio-5" class="radio-label"> Inactive </label>
-                        </div>
-                    </div>
 
                     <div class="form-group">
                         <button type="submit" class="btn text-dark update "> Save</button>
