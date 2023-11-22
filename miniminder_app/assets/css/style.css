@@ -144,12 +144,12 @@ table{
 }
 
 #update_staff .form-group,
-#add_user .form-group{
+#add_staff .form-group{
     margin: .4em 0;
 }
 
 #update_staff .form-group input[type="text"],
-#add_user .form-group input[type="text"]{
+#add_staff .form-group input[type="text"]{
     width: 100%;
     padding: .6em 1em;
     margin: .5em 0;
@@ -206,7 +206,7 @@ table{
 }
 
 #update_staff .form-group .btn,
-#add_user .form-group .btn{
+#add_staff .form-group .btn{
     width: 100%;
     padding: .9em 1em;
     background-color: skyblue;
@@ -216,4 +216,10 @@ table{
     cursor: pointer;
     border-radius: .2em;
     margin: .5em 0;
+}
+
+#update_staff .form-group .btn:hover,
+#add_staff .form-group .btn:hover{
+    background-color: #5F9EA0;
+    color: pink;
 }

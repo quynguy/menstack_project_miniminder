@@ -55,11 +55,20 @@ app.get('/parents', function (req,res) {
 });
 
 
-// page - admin post //
+
 // admin privilege //
+// page - admin post //
 app.get('/createpost', function (req,res) {
     res.send("Create Post - Admins Only");
     console.log("Create Post Page Loaded")
+});
+
+
+// admin privilege //
+// admin - update staff // 
+app.get('/admin-staff', function (req,res) {
+    res.render('admin_staff');
+    console.log("Admin Staff PageLoaded")
 });
 
 
@@ -72,13 +81,13 @@ app.get('/postcomment', function (req,res) {
 
 
 // admin - create staff // 
-app.get('/create-staff', function (req,res) {
-    res.send("Create New Staff Profile");
+app.get('/add-staff', function (req,res) {
+    res.render("add_staff");
     console.log("Create Staff Page Loaded")
 });
 
 // admin - create child // 
-app.get('/create-child', function (req,res) {
+app.get('/add-child', function (req,res) {
     res.send("Create New Child Profile");
     console.log("Create Child Page Loaded")
 });
@@ -90,6 +99,12 @@ app.get('/update-child', function (req,res) {
     console.log("Update Child Page Loaded")
 });
 
+
+// admin - update staff // 
+app.get('/update-staff', function (req,res) {
+    res.render('update_staff');
+    console.log("Update Child Page Loaded")
+});
 
 
 

@@ -6,55 +6,92 @@
 
     <!-- font awesome library linked -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../assets/css/style.css"
-    <title>MiniMinder Application</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Sign Up - Landing Page</title>
 </head>
+
+
 <body>
     <!-- header begin -->
     <header id="header">
         <nav>
             <div class="container">
                 <div class="text-center">
-                    <a href="/" class="nav-brand text-dark"> Sign Up - Landing Page </a>
-                    <!-- this is the landing page -->
+                    <a href="/" class="nav-brand text-dark"> Miniminder Application</a>
                 </div>
-
-                <!-- form handling-->
-                <form action="/" method="POST">
-                    <table class="table">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th>First Name</th> 
-                                <th>Last Name</th> 
-                                <th>Email</th> 
-                                <th>Phone Number</th>  
-                            </tr>
-                        </thead>
-                    </table>
-                </form>
-            </div> 
+            </div>
         </nav>
     </header>
-    <!-- header end -->
+        <!-- header end -->
 
 
 
+    
+         <!-- main site begin -->
+         <main id="site-main">
+            <div class="container">
+                <div class="box-nav-d-flex-justify-between">
+                    <a href="/login-admin">
+                        <span class="text-gradient"> Login Admin <i class="fa-regular fa-user"></i> </span>
+                    </a>
+                    </div>
+                    
+                    <div>
+                    <a href="/login-guardian">
+                        <span class="text-gradient"> Login Guardian <i class="fa-regular fa-user"></i> </span>
+                    </a>
+                </div>
 
-    <!-- main site begin -->
-    <main id="site-main">
-        <div class="container">
-            <div class="box-nav-d-flex-justify-between">
-                <a href="/login-admin">
-                    <span class="text-gradient"> Login Admin <i class="fa-regular fa-user"></i> </span>
-                </a>
-                <a href="/login-guardian">
-                    <span class="text-gradient"> Login Guardian <i class="fa-regular fa-user"></i> </span>
-                </a>
+            <div class="sign-up-container">
+                <div class="text-center">
+                <h2>Sign Up To Access MiniMinder</h2>
+                </div>    
+            </div>
+                
+ <!-- form handling-->
+ <form method="POST" id="add_staff">
+    <div class="new_staff">
+        <div class="form-group">
+            <label for="name" class="text-light"> Name </label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="name" value="" placeholder="Jane Smith">
+        </div>
+
+        <div class="form-group">
+            <label for="email" class="text-light"> Email </label>
+            <input type="text" name="email" value="" placeholder="example@gmail.com">
+        </div>
+
+        <div class="form-group">
+            <label for="birthday" class="text-light"> Date Of Birth </label>
+            <input type="text" name="birthday" value="" placeholder="02/14/1991">
+        </div>
+
+        <div class="form-group">
+            <label for="gender" class="text-light"> Gender </label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="gender" value="Male">
+                <label for="radio-2" class="radio-label"> Male </label>
+            </div>
+
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="gender" value="Female">
+                <label for="radio-3" class="radio-label"> Female </label>
             </div>
         </div>
-        
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update "> Submit </button>
+        </div>
+
+    </div>
+</form>
+
+            </div> 
+        </nav>
     </main>
-    <!-- main site begin -->
+     <!-- main site end -->
+
 
 </body>
 </html>
