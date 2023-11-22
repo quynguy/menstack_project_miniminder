@@ -81,6 +81,12 @@ app.get('/account-type', function (req,res) {
     console.log("Choose Privileges Page Loaded")
 });
 
+// all account login page DONE//
+app.get('/login-page', function (req,res) {
+    res.render('login_page');
+    console.log("Login Page Loaded")
+});
+
 
 
 // make a comment on a post // 
