@@ -206,7 +206,8 @@ table{
 }
 
 #update_staff .form-group .btn,
-#add_staff .form-group .btn{
+#add_staff .form-group .btn,
+#privileges .form-group .btn{
     width: 100%;
     padding: .9em 1em;
     background-color: skyblue;
@@ -219,7 +220,8 @@ table{
 }
 
 #update_staff .form-group .btn:hover,
-#add_staff .form-group .btn:hover{
+#add_staff .form-group .btn:hover,
+#privileges .form-group .btn:hover{
     background-color: #5F9EA0;
     color: pink;
 }

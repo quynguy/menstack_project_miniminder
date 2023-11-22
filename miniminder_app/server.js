@@ -30,23 +30,19 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")));
 app.set("view engine", "ejs");
 
 
-// landing page // 
+// landing page -Sign Up - DONE // 
 app.get('/', function (req,res) {
     res.render('index');
-    // renders individual html files - rendering index.ejs //
+
 });
 
-// home page // 
-app.get('/home', function (req,res) {
-    res.send("Home Page");
-    console.log("Home Page Loaded")
-});
 
 // page - admin dashboard //
 app.get('/admin', function (req,res) {
     res.send("Admin Page");
     console.log("Admin Page Only Loaded")
 });
+
 
 // page - parents dashboard //
 app.get('/parents', function (req,res) {
@@ -64,11 +60,25 @@ app.get('/createpost', function (req,res) {
 });
 
 
-// admin privilege //
-// admin - update staff // 
+// admin staff dashboard DONE //
 app.get('/admin-staff', function (req,res) {
     res.render('admin_staff');
     console.log("Admin Staff PageLoaded")
+});
+
+// admin privilege - DONE //
+// admin - update child // 
+app.get('/admin-child', function (req,res) {
+    res.render('admin_child');
+    console.log("Admin Child Page Loaded")
+});
+
+
+// sign up privileges  DONE//
+// account type // 
+app.get('/account-type', function (req,res) {
+    res.render('privileges');
+    console.log("Choose Privileges Page Loaded")
 });
 
 
@@ -80,27 +90,27 @@ app.get('/postcomment', function (req,res) {
 });
 
 
-// admin - create staff // 
+// admin - create staff  DONE // 
 app.get('/add-staff', function (req,res) {
     res.render("add_staff");
     console.log("Create Staff Page Loaded")
 });
 
-// admin - create child // 
+// admin - create child  DONE // 
 app.get('/add-child', function (req,res) {
-    res.send("Create New Child Profile");
+    res.render("add_child");
     console.log("Create Child Page Loaded")
 });
 
 
-// admin - update child // 
+// admin - update child  DONE// 
 app.get('/update-child', function (req,res) {
-    res.send("UpdateChild Profile");
+    res.render('update_child');
     console.log("Update Child Page Loaded")
 });
 
 
-// admin - update staff // 
+// admin - update staff  DONE// 
 app.get('/update-staff', function (req,res) {
     res.render('update_staff');
     console.log("Update Child Page Loaded")
