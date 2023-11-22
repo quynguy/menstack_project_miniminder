@@ -32,7 +32,8 @@ app.set("view engine", "ejs");
 
 // landing page // 
 app.get('/', function (req,res) {
-    res.send("Miniminder Application");
+    res.render('index');
+    // renders individual html files - rendering index.ejs //
 });
 
 // home page // 
