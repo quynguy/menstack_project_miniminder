@@ -143,12 +143,14 @@ table{
     margin: auto;
 }
 
+
 #update_staff .form-group,
 #add_staff .form-group,
 #add_child .form-group,
 #update_child .form-group,
 #all_login .form-group,
-#input_login .form-group{
+#input_login .form-group,
+#add_signup .form-group{
     margin: .4em 0;
 }
 
@@ -158,8 +160,7 @@ table{
 #update_child .form-group input[type="text"],
 #all_login .form-group input[type="text"],
 #input_login .form-group input[type="text"],
-#add_signup .form-group input[type="text"],
-#new_signup .form-group input[type="text"]{
+#add_signup .form-group input[type="text"]{
     width: 100%;
     padding: .6em 1em;
     margin: .5em 0;
@@ -215,12 +216,15 @@ table{
     background: wheat;
 }
 
+
+/* submit button */ 
 #update_staff .form-group .btn,
 #add_staff .form-group .btn,
 #privileges .form-group .btn,
 #add_child .form-group .btn,
 #update_child .form-group .btn,
 #all_login .form-group .btn,
+#input_login .form-group .btn,
 #add_signup .form-group .btn{
     width: 100%;
     padding: .9em 1em;
@@ -233,10 +237,13 @@ table{
     margin: .5em 0;
 }
 
+
+/* submit button hover */ 
 #update_staff .form-group .btn:hover,
 #add_staff .form-group .btn:hover,
 #privileges .form-group .btn:hover,
 #all_child .form-group .btn:hover,
+#all_login .form-group .btn:hover,
 #input_login .form-group .btn:hover,
 #add_signup .form-group .btn:hover{
     background-color: #5F9EA0;
