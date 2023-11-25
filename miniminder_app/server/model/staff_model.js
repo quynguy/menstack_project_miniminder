@@ -3,24 +3,24 @@ const mongoose = require('mongoose');
 var staffschema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: true,
     },
     email: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
     },
     number: {
-        type: Number,
-        required: true,
+        type: String,
+        required: false,
     },
     position: {
         type: String,
-        required: true
+        required: false,
     },
     birthday: {
-        type: Number,
-        required: true
+        type: String,
+        required: true,
     },
     gender: {
         type: String,
@@ -31,5 +31,5 @@ var staffschema = new mongoose.Schema({
 });
 
 
-const Staffdb = mongoose.model('staffdb', staffschema);
+const Staffdb = mongoose.model('Staffdb', staffschema);
 module.exports = Staffdb;

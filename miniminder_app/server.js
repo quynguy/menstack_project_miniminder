@@ -28,6 +28,7 @@ app.set("view engine", "ejs");
 
 
 
+
 // load assets //
 app.use('/css', express.static(path.resolve(__dirname, "assets/css")));
 // css/style.css // 

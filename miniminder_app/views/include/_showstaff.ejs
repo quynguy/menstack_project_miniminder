@@ -1,18 +1,23 @@
-
+<%for(var i =0; i < staffs.length; i++) { %>
     <tr>
-        <td>1</td>
-        <td>Staff Name</td>
-        <td>example@gmail.com</td>
-        <td>123-456-7890</td>
-        <td>Teacher</td>
-        <td>Female</td>
-        <td>02/14/1991</td>
+        <td><%= i + 1 %> </td>
+        <td><%= staffs[i].name %></td>
+        <td><%= staffs[i].email %></td>
+        <td><%= staffs[i].number %></td>
+        <td><%= staffs[i].position %></td>
+        <td><%= staffs[i].birthday %></td>
+        <td><%= staffs[i].gender %></td>
+        <td><%= staffs[i].status %></td>
         <td>
-            <a href="/update-staff" class="btn border-shadow update">
+            
+            <a href="/update-staff/<%= staffs[i]._id %>" class="btn border-shadow update">
                 <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
             </a>
-            <a class="btn border-shadow delete">
+
+            <a href="/delete-staff/<%= staffs[i]._id %>" class="btn border-shadow delete">
                 <span class="text-gradient"><i class="fas fa-times"></i></span>
             </a>
+
         </td>
     </tr>
+<% } %>

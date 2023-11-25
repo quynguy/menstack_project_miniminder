@@ -1,7 +1,29 @@
 const Staffdb = require('../model/staff_model');
 
-// create and save new staff //
-exports.create = (req, res) => {
+module.exports = {
+    admin_staff,
+    create,
+    show,
+    find,
+    update,
+    deleteStaff
+};
+
+
+// render to admin_staff page listing all staff members 
+async function admin_staff(req, res){
+    try {
+        const allStaff = await Staffdb.find();
+        res.render('admin_staff', { staffList: allStaff });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Internal Server Error');
+    }
+};
+
+
+// create and save new staff /
+async function create(req, res){
     // validate request //
     if(!req.body){
         res.status(400).send({ message: "Content can not be empty!" });
@@ -20,7 +42,8 @@ exports.create = (req, res) => {
     });
 
     // save user in the database
-    staff.save()
+    staff
+        .save()
         .then(data => {
             res.send(data);
         })
@@ -33,9 +56,19 @@ exports.create = (req, res) => {
 };
 
 
+async function show(req, res){
+    try {
+        const staff = await Staffdb.findById(req.params.id);
+        res.render("add_staff", { staffList: allStaff  });
+    } catch (err) {
+  console.log(err);
+  next(Error(err));
+    }
+};
+
 // retrieve and return all staff / retrieve and return a single staff //
-exports.find = (req, res) => {
-    Staffdb.find()
+async function find(req, res){
+    Staffdb.findById(id, req.body)
     .then(staff => {
         res.send(staff);
     })
@@ -46,7 +79,7 @@ exports.find = (req, res) => {
 
 
 // update a new identified user by user id
-exports.update = (req, res) => {
+async function update(req, res){
     if(!req.body){
         return res.status(400)
         .send({ message: "Data to update can not be empty" });
@@ -66,10 +99,10 @@ exports.update = (req, res) => {
 };
 
 // delete a user with specified user id in the request 
-exports.delete = (req, res) => {
+async function deleteStaff(req, res){
     const id = req.params.id;
-
     Staffdb.findByIdAndDelete(id)
+
     .then(data => {
         if(!data){
             res.status(404).send({ message: `Cannot Delete with id ${id}. Maybe id is wrong`});
@@ -84,8 +117,5 @@ exports.delete = (req, res) => {
             message: "Could not delete User with id=" + id
         });
     });
-
 };
 
-
-module.exports = Staffdb;
