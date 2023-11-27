@@ -30,14 +30,22 @@
                     </thead>
 
                     <tbody>
-                        <%- include('include/_showstaff.ejs')%>
-                    </tbody>
+                        <%staffList.forEach(staff => {%>
+                            <tr>
+                                <th scope="row"><%= staff._id %></th>
+                                <td><%= staff.name %></td>
+                                <td><%= staff.email %></td>
+                                <td><%= staff.number %></td>
+                                <td><%= staff.position %></td>
+                                <td><%= staff.birthday %></td>
+                                <td><%= staff.gender %></td>
+                                <td><%= staff.status %></td>
+                            </tr>
+                        <%})%>
+                        </tbody>
 
                 </table>
             </form>
-            <% staffsList.forEach(Staffdb => {%>
-                <p> <%= Staffdb.name %> </p>
-            <% }) %>
         </div>
     </main>
     <!-- main site end -->

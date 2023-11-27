@@ -45,7 +45,7 @@ async function create(req, res){
     staff
         .save()
         .then(data => {
-            res.send(data);
+            res.redirect('/admin-staff')
         })
         .catch(err => {
             res.status(500).send({

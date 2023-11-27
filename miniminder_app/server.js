@@ -27,11 +27,16 @@ app.set("view engine", "ejs");
 
 // get method: staffschema from mongodb to html
 app.get('/admin-staff', async (req, res) => {
-    const staffs = await Staffdb.find({});
-    res.render('admin_staff', {
-         staffList: staffs
-    });
- });
+    try {
+        const staffs = await Staffdb.find({});
+        res.render('admin_staff', {
+            staffList: staffs
+        });
+    } catch (error) {
+        // Handle the error, e.g., send an error response
+        res.status(500).send('Internal Server Error');
+    }
+});
 
 // load assets //
 app.use('/css', express.static(path.resolve(__dirname, "assets/css")));
