@@ -12,11 +12,11 @@ const staffschema = new mongoose.Schema({
     },
     number: {
         type: String,
-        required: false,
+        required: true,
     },
     position: {
         type: String,
-        required: false,
+        required: true,
     },
     birthday: {
         type: String,

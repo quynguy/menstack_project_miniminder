@@ -1,4 +1,4 @@
-const Childdb = require('../model/child_model');
+const ChildDB = require('../model/child_model');
 
 module.exports = {
     admin_child,
@@ -12,7 +12,7 @@ module.exports = {
 
 async function admin_child(req, res){
     try {
-        const allChild = await Childdb.find();
+        const allChild = await ChildDB.find();
         res.render('admin_child', { childList: allchild });
     } catch (err) {
         console.error(err);
@@ -28,7 +28,7 @@ async function create(req, res){
         return; 
     };
 
-    const child = new Childdb ({
+    const child = new ChildDB ({
         name: req.body.name,
         birthday: req.body.birthday,
         parents: req.body.parents,
@@ -54,7 +54,7 @@ async function create(req, res){
 
 async function show(req, res){
     try {
-        const child = await Childdb.findById(req.params.id);
+        const child = await ChildDB.findById(req.params.id);
         res.render("add_child", { childList: allChild  });
     } catch (err) {
   console.log(err);
@@ -63,7 +63,7 @@ async function show(req, res){
 };
 
 async function find(req, res){
-    Childdb.findById(id, req.body)
+    ChildDB.findById(id, req.body)
     .then(staff => {
         res.send(staff);
     })
@@ -79,7 +79,7 @@ async function update(req, res){
         .send({ message: "Data to update can not be empty" });
     }
     const id = req.params.id;
-    Childdb.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+    ChildDB.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
     .then(data =>{
         if(!data){
             res.status(404).send({ message: `Cannot Update user with ${id}. Maybe user not found!`});
@@ -94,7 +94,7 @@ async function update(req, res){
 
 async function deleteChild(req, res){
     const id = req.params.id;
-    Childdb.findByIdAndDelete(id)
+    ChildDB.findByIdAndDelete(id)
 
     .then(data => {
         if(!data){

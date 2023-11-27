@@ -12,11 +12,10 @@ const childschema = new mongoose.Schema({
     parents: {
         type: String,
         required: true,
-        unique: true,
     },
     number: {
         type: String,
-        required: false,
+        required: true,
     },
     teacher: {
         type: String,
@@ -28,5 +27,5 @@ const childschema = new mongoose.Schema({
 });
 
 
-const Childdb = mongoose.model('Childdb', childschema);
-module.exports = Childdb;
+const ChildDB = mongoose.model('ChildDB', childschema);
+module.exports = ChildDB;

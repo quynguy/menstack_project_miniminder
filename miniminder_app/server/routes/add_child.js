@@ -10,7 +10,7 @@ app.get('/update-child/:id', async (req, res) => {
     const childId = req.params.id;
 
     try {
-        const child = await Childdb.findById(childId);
+        const child = await ChildDB.findById(childId);
         res.render('update_child', { child});
 
         if (!child) {
