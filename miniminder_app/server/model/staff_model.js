@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-var staffschema = new mongoose.Schema({
+const staffschema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -27,7 +27,7 @@ var staffschema = new mongoose.Schema({
     },
     status: {
         type: String,
-    }
+    },
 });
 
 

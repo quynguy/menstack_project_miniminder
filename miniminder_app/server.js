@@ -8,6 +8,7 @@ const connectDB = require('./server/database/connection');
 // initialize express app // 
 const app = express();
 const dotenv = require('dotenv');
+const Staffdb = require('./server/model/staff_model');
 
 dotenv.config({path:'config.env'});
 const PORT = process.env.PORT || 1616 
@@ -19,15 +20,18 @@ app.use(morgan('tiny'));
 connectDB();
 
 // parse requests to body-parser // 
-app.use(bodyparser.urlencoded({ extended: true }));
-
-
+app.use(bodyparser.urlencoded({ extended: false }));
 
 // set view engine //
 app.set("view engine", "ejs");
 
-
-
+// get method: staffschema from mongodb to html
+app.get('/admin-staff', async (req, res) => {
+    const staffs = await Staffdb.find({});
+    res.render('admin_staff', {
+         staffList: staffs
+    });
+ });
 
 // load assets //
 app.use('/css', express.static(path.resolve(__dirname, "assets/css")));
