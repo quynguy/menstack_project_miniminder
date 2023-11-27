@@ -4,20 +4,26 @@ const route = express.Router();
 
 const services = require('../services/render');
 const staffcontroller = require('../controller/staff_controller');
+const childcontroller = require('../controller/child_controller');
 
 
 // home route - landing page
 route.get('/', services.homeRoutes);
 
-// admin staff route 
+// admin staff/child route 
 route.get('/admin-staff', services.admin_staff);
+route.get('/admin-child', services.admin_child);
 
-// add staff route
+
+// add staff/child route
 route.get('/add-staff', services.add_staff);
 route.post('/add-staff', staffcontroller.create);
 
+route.get('/add-child', services.add_child);
+route.post('/add-child', childcontroller.create);
 
-// update staff route 
+
+// update staff/child  route 
 route.get('/update-staff', services.update_staff);
 
 route.get('/admin-child', services.admin_child);
@@ -31,7 +37,6 @@ route.get('/login-page', services.login_page);
 
 route.get('/update-staff', services.update_staff);
 
-route.get('/add-child', services.add_child);
 
 route.get('/update-child', services.update_child);
 
@@ -72,5 +77,12 @@ route.get('/admin-staff', staffcontroller.admin_staff);
 route.put('staffs/:id', staffcontroller.update);
 route.delete('staffs/:id', staffcontroller.deleteStaff);
 
+
+route.post('/childs', childcontroller.create);
+route.get('/childs', childcontroller.find);
+route.get('/childs', childcontroller.show);
+route.get('/admin-child', childcontroller.admin_child);
+route.put('childs/:id', childcontroller.update);
+route.delete('childs/:id', childcontroller.deleteChild);
 
 module.exports = route;

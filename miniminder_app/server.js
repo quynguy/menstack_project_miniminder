@@ -38,6 +38,20 @@ app.get('/admin-staff', async (req, res) => {
     }
 });
 
+// get method: childschema from mongodb to html
+
+app.get('/admin-child', async (req, res) => {
+    try {
+        const child = await Childdb.find({});
+        res.render('admin_child', {
+            childList: child
+        });
+    } catch (error) {
+        // Handle the error, e.g., send an error response
+        res.status(500).send('Internal Server Error');
+    }
+});
+
 // load assets //
 app.use('/css', express.static(path.resolve(__dirname, "assets/css")));
 // css/style.css // 

@@ -30,8 +30,18 @@
                     </thead>
 
                     <tbody>
-                        <%- include('include/_showchild.ejs')%>
-                    </tbody>
+                        <%childList.forEach(child => {%>
+                            <tr>
+                                <th scope="row"><%= child._id %></th>
+                                <td><%= child.name %></td>
+                                <td><%= child.birthday %></td>
+                                <td><%= child.parents %></td>
+                                <td><%= child.number %></td>
+                                <td><%= child.teacher %></td>
+                                <td><%= child.gender %></td>
+                            </tr>
+                        <%})%> 
+                        </tbody>
 
                 </table>
             </form>
