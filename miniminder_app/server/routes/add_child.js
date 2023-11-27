@@ -11,7 +11,7 @@ app.get('/update-child/:id', async (req, res) => {
 
     try {
         const child = await ChildDB.findById(childId);
-        res.render('update_child', { child});
+        res.render('update_child', { child });
 
         if (!child) {
             res.status(404).send('Child not found');
@@ -19,7 +19,7 @@ app.get('/update-child/:id', async (req, res) => {
 
         res.render('update_child', { child });
     } catch (err) {
-        res.status(500).send('Internal server error');
+        res.status(500).send('Internal server error - Update Incomplete');
     }
 });
 
@@ -37,6 +37,6 @@ app.get('/delete-child/:id', async (req, res) => {
       res.redirect('/admin-child');
     } catch (error) {
       console.error(error);
-      res.status(500).send('Internal Server Error');
+      res.status(500).send('Internal Server Error - Delete Incomplete');
     }
   });

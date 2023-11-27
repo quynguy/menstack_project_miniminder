@@ -11,15 +11,15 @@ const childschema = new mongoose.Schema({
     },
     parents: {
         type: String,
-        required: true,
+        required: false,
     },
     number: {
         type: String,
-        required: true,
+        // required: false,
     },
     teacher: {
         type: String,
-        required: false,
+        // required: false,
     },
     gender: {
         type: String,

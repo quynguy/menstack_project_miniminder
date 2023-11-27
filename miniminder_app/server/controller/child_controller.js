@@ -13,10 +13,10 @@ module.exports = {
 async function admin_child(req, res){
     try {
         const allChild = await ChildDB.find();
-        res.render('admin_child', { childList: allchild });
+        res.render('admin_child', { childList: allChild });
     } catch (err) {
         console.error(err);
-        res.status(500).send('Internal Server Error');
+        res.status(500).send('Internal Server Error - Admin Page Can Not Load');
     }
 };
 
@@ -28,6 +28,8 @@ async function create(req, res){
         return; 
     };
 
+    console.log("Request Body:", req.body);
+    
     const child = new ChildDB ({
         name: req.body.name,
         birthday: req.body.birthday,
@@ -55,7 +57,7 @@ async function create(req, res){
 async function show(req, res){
     try {
         const child = await ChildDB.findById(req.params.id);
-        res.render("add_child", { childList: allChild  });
+        res.render("add_child", { childList: Child  });
     } catch (err) {
   console.log(err);
   next(Error(err));

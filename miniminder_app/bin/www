@@ -1,5 +1,4 @@
 const app = require('../server');
-const debug = require('debug')('mongoose-movies-lesson-code:server');
 const http = require('http');
 
 

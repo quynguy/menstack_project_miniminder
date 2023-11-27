@@ -20,12 +20,13 @@
                         <tr>
                             <th>ID</th>
                             <th>Child Name</th>
+                            <th>Date Of Birth</th>
                             <th>Parents Name</th> 
                             <th>Contact Number</th> 
                             <th>Teacher</th> 
                             <th>Gender</th>
-                            <th>Date Of Birth</th>
-                            <th>Edit</th>
+                            <th>Update</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
 
@@ -39,6 +40,17 @@
                                 <td><%= child.number %></td>
                                 <td><%= child.teacher %></td>
                                 <td><%= child.gender %></td>
+                                <td>
+                                    <a href="/update-staff/<%= child._id %>" class="btn border-shadow update">
+                                        <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="/delete-staff/<%= child._id %>" class="btn border-shadow delete">
+                                        <span class="text-gradient"><i class="fas fa-times"></i></span>
+                                    </a>
+                                </td>
+
                             </tr>
                         <%})%> 
                         </tbody>

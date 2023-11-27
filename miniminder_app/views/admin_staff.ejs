@@ -25,7 +25,9 @@
                             <th>Job Title</th> 
                             <th>Gender</th>
                             <th>Date Of Birth</th>
-                            <th>Edit</th>
+                            <th>Status</th>
+                            <th>Update</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
 
@@ -40,9 +42,24 @@
                                 <td><%= staff.birthday %></td>
                                 <td><%= staff.gender %></td>
                                 <td><%= staff.status %></td>
+
+                                <td>
+                                    <a href="/update-staff/<%= staff._id %>" class="btn border-shadow update">
+                                        <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="/delete-staff/<%= staff._id %>" class="btn border-shadow delete">
+                                        <span class="text-gradient"><i class="fas fa-times"></i></span>
+                                    </a>
+                                </td>
+                                
                             </tr>
                         <%})%> 
                         </tbody>
+
+ 
+
                 </table>
             </form>
         </div>
