@@ -66,8 +66,8 @@ async function show(req, res){
 
 async function find(req, res){
     ChildDB.findById(id, req.body)
-    .then(staff => {
-        res.send(staff);
+    .then(child => {
+        res.send(child);
     })
     .catch(err => {
         res.status(500).send({ message: errmessage || "Error Occurred while retriving data" });

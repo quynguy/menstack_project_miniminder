@@ -25,6 +25,7 @@ route.post('/add-child', childcontroller.create);
 
 // update staff/child  route 
 route.get('/update-staff/:id', services.update_staff);
+route.get('/update-child/:id', services.update_child);
 
 route.get('/admin-child', services.admin_child);
 
@@ -36,7 +37,6 @@ route.get('/login-page', services.login_page);
 
 
 route.get('/update-staff', services.update_staff);
-
 
 route.get('/update-child', services.update_child);
 

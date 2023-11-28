@@ -7,24 +7,24 @@ const childschema = new mongoose.Schema({
     },
     birthday: {
         type: String,
-        required: true,
     },
     parents: {
         type: String,
-        required: false,
+        required: true,
     },
     number: {
         type: String,
-        // required: false,
+        required: true,
     },
     teacher: {
         type: String,
-        // required: false,
+        required: true,
     },
     gender: {
         type: String,
-    },
+    }
 });
+
 
 
 const ChildDB = mongoose.model('ChildDB', childschema);

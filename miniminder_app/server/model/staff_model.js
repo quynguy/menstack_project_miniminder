@@ -12,11 +12,11 @@ const staffschema = new mongoose.Schema({
     },
     number: {
         type: String,
-        required: true,
+        required: false,
     },
     position: {
         type: String,
-        required: true,
+        required: false,
     },
     birthday: {
         type: String,
@@ -27,7 +27,7 @@ const staffschema = new mongoose.Schema({
     },
     status: {
         type: String,
-    },
+    }
 });
 
 

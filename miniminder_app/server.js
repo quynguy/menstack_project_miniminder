@@ -58,15 +58,19 @@ app.put('/update-staff/:id', async (req, res) => {
 });
 
 // delete method: delete for staff
-app.get('/delete-staff/:id', (req, res) => {
+app.get('/delete-staff/:id', async (req, res) => {
     const staffId = req.params.id;
-    const staffIndex = staffMembers.findIndex(member => member.id === staffId);
 
-    if (staffIndex !== -1) {
-        staffMembers.splice(staffIndex, 1);
-        res.send(`Successfully deleted staff with ID ${staffId}`);
-    } else {
-        res.status(404).send('Staff member not found');
+   try {
+        const deletedStaff = await Staffdb.findByIdAndDelete(staffId);
+
+        if (deletedStaff) {
+            res.redirect('/admin-staff');
+        } else {
+            res.status(404).send('Staff Member not found');
+        }
+    } catch (error) {
+        res.status(500).send('Internal Server Error - Deletion Incomplete')
     }
 });
 
@@ -85,8 +89,36 @@ app.get('/admin-child', async (req, res) => {
 });
 
 
-// update for child
+// put method: update for child
+app.put('/update-child/:id', async (req, res) => {
+    const { id } = req.params;
+    const { newData } = req.body;
 
+    try {
+        const updatedChild = await ChildDbb.findByIdAndUpdate(id, { yourField: newData }, { new: true });
+
+        res.redirect('/admin-child');
+    } catch (error) {
+        res.status(500).send('Internal Server Error - Unable to update child record');
+    }
+});
+
+// get method: delete for child
+app.get('/delete-child/:id', async (req, res) => {
+    const childId = req.params.id;
+
+   try {
+        const deletedChild = await ChildDb.findByIdAndDelete(childId);
+
+        if (deletedChild) {
+            res.redirect('/admin-child');
+        } else {
+            res.status(404).send('Child Profile not found');
+        }
+    } catch (error) {
+        res.status(500).send('Internal Server Error - Deletion Incomplete')
+    }
+});
 
 
 // load assets //
