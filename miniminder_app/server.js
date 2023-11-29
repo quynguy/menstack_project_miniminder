@@ -129,6 +129,12 @@ app.use('/img', express.static(path.resolve(__dirname, "assets/img")));
 app.use('/js', express.static(path.resolve(__dirname, "assets/js")));
 
 
+// routes
+app.get('/infant', (req, res) => {
+    res.render('infant');
+});
+
+
 
 // load routers 
 app.use('/', require('./server/routes/router'));
