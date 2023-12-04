@@ -90,9 +90,11 @@ async function update(req, res){
         }
     })
     .catch(err => {
-        res.status(500).send({ messsage: "Error Update user information" });
+        res.status(500).send({ message: "Error Update user information" });
     });
 };
+
+
 
 async function deleteChild(req, res){
     const id = req.params.id;

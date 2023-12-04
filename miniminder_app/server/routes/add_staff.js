@@ -6,11 +6,11 @@ route.get('/admin-staff', function(req, res, next) {
     res.redirect('/add-staff');
 });
 
-app.get('/update-staff/:id', async (req, res) => {
+route.get('/update-staff/:id', async (req, res) => {
     const staffId = req.params.id;
 
     try {
-        const staff = await Staffdb.findById(staffId);
+        const staff = await Staffdb.findByIdAndUpdate(staffId);
         res.render('update_staff', { staff });
 
         if (!staff) {
@@ -24,7 +24,7 @@ app.get('/update-staff/:id', async (req, res) => {
 });
 
 
-app.get('/delete-staff/:id', async (req, res) => {
+route.get('/delete-staff/:id', async (req, res) => {
     const staffId = req.params.id;
   
     try {
@@ -40,3 +40,5 @@ app.get('/delete-staff/:id', async (req, res) => {
       res.status(500).send('Internal Server Error');
     }
   });
+
+  module.exports = route;

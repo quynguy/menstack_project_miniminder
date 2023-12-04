@@ -6,25 +6,25 @@ route.get('/admin-child', function(req, res, next) {
     res.redirect('/add-child');
 });
 
-app.get('/update-child/:id', async (req, res) => {
+route.post('/update-child/:id', async (req, res) => {
     const childId = req.params.id;
 
     try {
-        const child = await ChildDB.findById(childId);
+        const child = await ChildDB.findByIdAndUpdate(childId);
         res.render('update_child', { child });
 
         if (!child) {
             res.status(404).send('Child not found');
         }
 
-        res.render('update_child', { child });
+        res.redirect('/admin-child');
     } catch (err) {
         res.status(500).send('Internal server error - Update Incomplete');
     }
 });
 
 
-app.get('/delete-child/:id', async (req, res) => {
+route.get('/delete-child/:id', async (req, res) => {
     const childId = req.params.id;
   
     try {
@@ -40,3 +40,5 @@ app.get('/delete-child/:id', async (req, res) => {
       res.status(500).send('Internal Server Error - Delete Incomplete');
     }
   });
+
+  module.exports = route;

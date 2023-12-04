@@ -42,20 +42,22 @@ app.get('/admin-staff', async (req, res) => {
 });
 
 
-
-// put method: update for staff
-app.put('/update-staff/:id', async (req, res) => {
+// post method: update for staff
+app.post('/update-staff/:id', async (req, res) => {
     const { id } = req.params;
     const { newData } = req.body;
 
     try {
-        const updatedStaff = await Staffdb.findByIdAndUpdate(id, { yourField: newData }, { new: true });
+        const updatedStaff = await Staffdb.findByIdAndUpdate(id, { new: true });
 
         res.redirect('/admin-staff');
     } catch (error) {
-        res.status(500).send('Internal Server Error - Unable to update child record');
+        res.status(500).send('Internal Server Error - Unable to update staff record');
     }
 });
+
+
+
 
 // delete method: delete for staff
 app.get('/delete-staff/:id', async (req, res) => {
@@ -74,6 +76,7 @@ app.get('/delete-staff/:id', async (req, res) => {
     }
 });
 
+
 // get method: childschema from mongodb to html
 app.get('/admin-child', async (req, res) => {
     try {
@@ -89,19 +92,19 @@ app.get('/admin-child', async (req, res) => {
 });
 
 
-// put method: update for child
-app.put('/update-child/:id', async (req, res) => {
+// post method: update for child
+app.post('/update-child/:id', async (req, res) => {
     const { id } = req.params;
     const { newData } = req.body;
 
     try {
-        const updatedChild = await ChildDbb.findByIdAndUpdate(id, { yourField: newData }, { new: true });
-
+        const updatedChild = await ChildDb.findByIdAndUpdate(id, newData, { new: true });
         res.redirect('/admin-child');
     } catch (error) {
         res.status(500).send('Internal Server Error - Unable to update child record');
     }
 });
+
 
 // get method: delete for child
 app.get('/delete-child/:id', async (req, res) => {
@@ -130,8 +133,8 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")));
 
 
 // routes
-app.get('/infant', (req, res) => {
-    res.render('infant');
+app.get('/', (req, res) => {
+    res.render('index');
 });
 
 

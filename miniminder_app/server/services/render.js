@@ -15,7 +15,7 @@ exports.add_staff = (req, res) => {
 };
 
 exports.update_staff = (req, res) => {
-    res.render('update_staff');
+    res.render('');
 }
 
 exports.login_page = (req, res) => {

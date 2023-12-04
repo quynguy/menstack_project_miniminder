@@ -11,6 +11,11 @@
     box-sizing: border-box;
 }
 
+.main-container{
+    display: flex;
+    justify-content: center;
+}
+
 .container{
     max-width: 1024px;
     margin: auto;
@@ -19,6 +24,16 @@
 .nav-brand{
     font-size: 1.5em;
     font-weight: bold;
+}
+
+body > nav {
+    grid-area: nav;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px 0 30px;
+
 }
 
 .d-flex{
@@ -64,16 +79,19 @@
     width: 100%;
 }
 
-#site-main{
+#site-main,
+#site-main-update{
     margin-top:6em;
 }
 
-#site-main .container .box-nav > a{
+#site-main .container .box-nav > a,
+#site-main-update .container .box-nav > a{
     font-size: 1em;
     padding: .5em 1em;
 }
 
-#site-main .container form{
+#site-main .container form,
+#site-main-update .container form{
     margin: 2em 0;
 }
 
@@ -128,7 +146,6 @@ table{
 }
 
 
-/* add user & update user template */
 
 .form-title{
     margin-top: 2em;
@@ -144,9 +161,10 @@ table{
 }
 
 
+
+
 #update_staff .form-group,
 #add_staff .form-group,
-#add_child .form-group,
 #update_child .form-group,
 #all_login .form-group,
 #input_login .form-group,
@@ -171,7 +189,8 @@ table{
 }
 
 #update_staff .form-group .radio,
-#add_user .form-group .radio{
+#add_user .form-group .radio,
+#update_child .form-group .radio{
     margin: 1em 2em;
 }   
 
@@ -239,6 +258,7 @@ table{
 
 
 /* submit button hover */ 
+#update_child .form-group .btn:hover,
 #update_staff .form-group .btn:hover,
 #add_staff .form-group .btn:hover,
 #privileges .form-group .btn:hover,
@@ -249,3 +269,6 @@ table{
     background-color: #5F9EA0;
     color: pink;
 }
+
+
+
