@@ -2,9 +2,8 @@
   "name": "miniminder_app",
   "version": "1.0.0",
   "engines": {
-    "node": "18.18.2"
+    "node": "18.x"
   },
-  "npm": "10.2.4",
   "description": "men stack unit 2 project",
   "main": "server.js",
   "scripts": {
@@ -30,9 +29,6 @@
     "mongodb": "^6.3.0",
     "mongoose": "^8.0.1",
     "morgan": "^1.10.0",
-    "nodemon": "^3.0.1",
-    "node": "18.8x",
-    "npm": "10.2.4",
-
+    "nodemon": "^3.0.1"
   }
 }
