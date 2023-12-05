@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node .bin/www"
+    "web": "node .bin/www"
   },
   "keywords": [
     "crud",
@@ -18,7 +18,7 @@
   ],
   "author": "quynguy",
   "engines": {
-    "node": "14.x"
+    "node": "18.18.2"
   }
   "license": "ISC",
   "dependencies": {
