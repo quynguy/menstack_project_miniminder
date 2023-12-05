@@ -17,6 +17,9 @@
     "css"
   ],
   "author": "quynguy",
+  "engines": {
+    "node": "14.x"
+  }
   "license": "ISC",
   "dependencies": {
     "axios": "^1.6.2",

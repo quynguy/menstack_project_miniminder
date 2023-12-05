@@ -5,6 +5,7 @@ const path = require('path');
 
 const connectDB = require('./server/database/connection');
 
+
 // initialize express app // 
 const app = express();
 const dotenv = require('dotenv');
