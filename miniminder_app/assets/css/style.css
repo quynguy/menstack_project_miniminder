@@ -195,6 +195,19 @@ table{
 }   
 
 
+
+/* update child form */
+.update-child {
+    background-color: blue;
+}
+
+
+
+
+
+
+
+
 /* adding style to radio buttons */
 .radio input[type="radio"]{
     position: absolute;
