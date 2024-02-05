@@ -135,6 +135,21 @@
 }
 
 
+.cards {
+    display: grid; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 26px; 
+    grid-template-areas: 
+      "Toddlers Preschool Summer"; 
+  }
+  
+  .Toddlers { grid-area: Toddlers; }
+  .Preschool { grid-area: Preschool; }
+  .Summer { grid-area: Summer; }
+
+
 
 
 .main-container{
