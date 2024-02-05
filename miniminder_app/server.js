@@ -34,6 +34,7 @@ app.set('views', path.join(__dirname, 'views'));
 // static files from 'assets' directory 
 app.use(express.static(path.join(__dirname, 'assets')));
 
+
 // get method: staffschema from mongodb to html
 app.get('/admin-staff', async (req, res) => {
     try {
@@ -48,7 +49,6 @@ app.get('/admin-staff', async (req, res) => {
     }
 });
 
-
 // post method: update for staff
 app.post('/update-staff/:id', async (req, res) => {
     const { id } = req.params;
@@ -62,9 +62,6 @@ app.post('/update-staff/:id', async (req, res) => {
         res.status(500).send('Internal Server Error - Unable to update staff record');
     }
 });
-
-
-
 
 // delete method: delete for staff
 app.get('/delete-staff/:id', async (req, res) => {
@@ -83,7 +80,6 @@ app.get('/delete-staff/:id', async (req, res) => {
     }
 });
 
-
 // get method: childschema from mongodb to html
 app.get('/admin-child', async (req, res) => {
     try {
@@ -99,7 +95,6 @@ app.get('/admin-child', async (req, res) => {
     }
 });
 
-
 // post method: update for child
 app.post('/update-child/:id', async (req, res) => {
     const { id } = req.params;
@@ -112,7 +107,6 @@ app.post('/update-child/:id', async (req, res) => {
         res.status(500).send('Internal Server Error - Unable to update child record');
     }
 });
-
 
 // get method: delete for child
 app.get('/delete-child/:id', async (req, res) => {
@@ -131,14 +125,10 @@ app.get('/delete-child/:id', async (req, res) => {
     }
 });
 
-
-
 // routes
 app.get('/', (req, res) => {
     res.render('index');
 });
-
-
 
 // load routers 
 app.use('/', require('./server/routes/router'));

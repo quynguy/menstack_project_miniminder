@@ -11,19 +11,146 @@
     box-sizing: border-box;
 }
 
+
+
+
+/*index.ejs*/
+
+.header-nav {
+    margin-top: 10px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    margin-right: 25px;
+}
+
+.index-container {
+    margin-top: 15px;
+}
+
+.home-text-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: lightcyan;
+    height: 300px;
+}
+
+.home-primary-subheading {
+    font-weight: 700;
+    color: #b48b4d;
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+
+.home-primary-heading {
+    color: #4c4c4c;
+    text-align: center;
+}
+
+.home-primary-text {
+    text-align: center;
+    color: #6a6a6a;
+    margin-top: 1rem;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+
+.about-text-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(238, 210, 214);
+    height: 350px;
+}
+
+.about-primary-subheading {
+    font-weight: 700;
+    color: #b48b4d;
+    font-size: 1.75rem;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.about-primary-heading {
+    color: #4c4c4c;
+    text-align: center;
+    font-size: 1.75rem;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 10px;
+}
+
+
+.about-primary-text {
+    text-align: center;
+    color: #6a6a6a;
+    margin-top: 1rem;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.carousel-container {
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    height: 250px;
+    background-color: rgb(238, 210, 214);   
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 100%;
+    scroll-snap-align: start;
+}
+
+
+.prev,
+.next {
+    background: transparent;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 0;
+    margin-bottom: 50px;
+}
+
+.next {
+    right: 0;
+    margin-bottom: 50px;
+}
+
+
+
+
 .main-container{
     display: flex;
     justify-content: center;
 }
 
 .container{
-    max-width: 1024px;
-    margin: auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .nav-brand{
     font-size: 1.5em;
     font-weight: bold;
+    text-decoration: none;
 }
 
 body > nav {
