@@ -30,6 +30,10 @@ app.use(bodyparser.urlencoded({ extended: false }));
 app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, 'views'));
 
+
+// static files from 'assets' directory 
+app.use(express.static(path.join(__dirname, 'assets')));
+
 // get method: staffschema from mongodb to html
 app.get('/admin-staff', async (req, res) => {
     try {
@@ -127,13 +131,6 @@ app.get('/delete-child/:id', async (req, res) => {
     }
 });
 
-
-// load assets //
-app.use('/css', express.static(path.resolve(__dirname, "assets/css")));
-// css/style.css // 
-
-app.use('/img', express.static(path.resolve(__dirname, "assets/img")));
-app.use('/js', express.static(path.resolve(__dirname, "assets/js")));
 
 
 // routes
