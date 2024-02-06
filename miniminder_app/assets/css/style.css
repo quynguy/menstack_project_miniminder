@@ -16,6 +16,11 @@
 
 /*index.ejs*/
 
+.nav-container{
+    background-color: #ADF7B6;
+    height: 50px;
+}
+
 .header-nav {
     margin-top: 10px;
 }
@@ -25,17 +30,30 @@
     margin-right: 25px;
 }
 
+/* index .ejs/ home section */
+
 .index-container {
-    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFC09F;
+    overflow: hidden;
 }
 
-.home-text-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: lightcyan;
-    height: 300px;
+.index-left {
+   flex: 1;
+   text-align: center;
 }
+
+.index-right {
+    flex: 1/2;
+}
+
+.index-right img {
+    width: 450px;
+    height: auto;
+}
+
 
 .home-primary-subheading {
     font-weight: 700;
@@ -48,24 +66,29 @@
 .home-primary-heading {
     color: #4c4c4c;
     text-align: center;
+    font-size: 40px;
 }
+
 
 .home-primary-text {
     text-align: center;
     color: #6a6a6a;
-    margin-top: 1rem;
-    margin-left: 250px;
-    margin-right: 250px;
+    padding: 30px;
+    font-size: 20px;
 }
 
 
-.about-text-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgb(238, 210, 214);
-    height: 350px;
+button {
+    border-radius: 16px;
+    width: 150px;
+    height: 40px;
+    background-color: #ADF7B6;
+    border: 3px solid #79ADDC;
+    font-weight: 700;
 }
+
+/* index .ejs/ about section */
+
 
 .about-primary-subheading {
     font-weight: 700;
@@ -79,8 +102,6 @@
     color: #4c4c4c;
     text-align: center;
     font-size: 1.75rem;
-    margin-left: 250px;
-    margin-right: 250px;
     margin-top: 10px;
 }
 
@@ -88,10 +109,11 @@
 .about-primary-text {
     text-align: center;
     color: #6a6a6a;
-    margin-top: 1rem;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-top: 5px;
+    padding: 15px;
 }
+
+
 
 .carousel-container {
     position: relative;
@@ -103,13 +125,14 @@
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     height: 250px;
-    background-color: rgb(238, 210, 214);   
+    background-color: #FFEE93;
 }
 
 .carousel-item {
     flex: 0 0 auto;
     width: 100%;
     scroll-snap-align: start;
+
 }
 
 
@@ -120,7 +143,7 @@
     font-size: 2em;
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 20%;
     transform: translateY(-50%);
 }
 
@@ -135,6 +158,8 @@
 }
 
 
+/* index .ejs/ programs*/ 
+
 .cards {
     display: grid; 
     grid-auto-rows: 1fr; 
@@ -143,11 +168,75 @@
     gap: 0px 26px; 
     grid-template-areas: 
       "Toddlers Preschool Summer"; 
-  }
-  
-  .Toddlers { grid-area: Toddlers; }
-  .Preschool { grid-area: Preschool; }
-  .Summer { grid-area: Summer; }
+}
+
+.Toddlers { 
+    grid-area: Toddlers; 
+}
+
+.Preschool { 
+    grid-area: Preschool; 
+}
+
+.Summer { 
+    grid-area: Summer; 
+}
+
+
+.program-container {
+    background-color: #FCF5C7;
+    padding: 25px;
+}
+
+
+
+.programs-text-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(238, 210, 214);
+    height: 350px;
+}
+
+.programs-primary-subheading {
+    font-weight: 700;
+    color: #b48b4d;
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+
+.programs-primary-heading {
+    color: #4c4c4c;
+    text-align: center;
+    font-size: 1.75rem;
+    margin-top: 10px;
+}
+
+
+.programs-primary-text {
+    text-align: center;
+    color: #6a6a6a;
+    margin-top: 1rem;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.cards-item {
+    border: 2px solid lightseagreen;
+    border-radius: 16px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+
+
+
+
+
+
 
 
 
